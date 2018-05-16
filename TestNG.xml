@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PropertyFinder_Automation" verbose="3" parallel="false">
+
+
+	<test name="PropertyFinder_Automationchrome" preserve-order="true">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.pf.testscripts.TestSuite">
+				<methods>
+				<include name="Searchtwobedrooms"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>	 
+	
+	
+	<listeners>
+	    <listener class-name="com.pf.listeners.AnnotationTransformer"/>
+        <listener class-name="com.pf.listeners.ExtentReporterNG"/>
+  </listeners>
+  </suite>
